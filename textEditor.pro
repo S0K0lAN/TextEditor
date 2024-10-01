@@ -10,10 +10,12 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    specsymbolsparser.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    specsymbolsparser.h
 
 FORMS += \
     mainwindow.ui
@@ -22,3 +24,11 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+TRANSLATIONS += Languages/QtLanguage_ru.ts \
+    Languages/QtLanguage_en.ts
+
+CODECFORSRC += UTF-8
+
+RESOURCES += \
+    res.qrc
